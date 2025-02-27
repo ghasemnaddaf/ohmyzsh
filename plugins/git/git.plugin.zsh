@@ -62,7 +62,9 @@ alias gav='git add --verbose'
 alias gap='git apply'
 alias gapt='git apply --3way'
 
-alias gb='git branch'
+alias gb='git --no-pager branch'
+alias gbc='git --no-pager branch --show-current'
+alias gbcur='gbc'
 alias gba='git branch -a'
 alias gbd='git branch -d'
 alias gbda='git branch --no-color --merged | command grep -vE "^(\+|\*|\s*($(git_main_branch)|development|develop|devel|dev)\s*$)" | command xargs -n 1 git branch -d'
@@ -240,8 +242,8 @@ alias gpsoat='git push origin --all && git push origin --tags'
 
 # compdef _git gpsoat=git-push
 alias gbr='git rev-parse --abbrev-ref HEAD'
-alias gpsu='git push -u origin $(gbr)'
-alias gpsup='git push upstream'
+alias gpsu='git push -u origin $(gbc)'  # basically same as gpsup above
+# alias gpsup='git push upstream'
 alias gpsv='git push -v'
 alias gpsfff='git push --force'
 
@@ -403,7 +405,7 @@ alias gbso='git bisect old'
 alias gbsr='git bisect reset'
 alias gbss='git bisect start'
 alias gbl='git blame -w'
-alias gb='git branch'
+# alias gb='git branch'    this is already defined above
 alias gba='git branch --all'
 alias gbd='git branch --delete'
 alias gbD='git branch --delete --force'
