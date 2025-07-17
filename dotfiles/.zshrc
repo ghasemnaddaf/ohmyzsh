@@ -81,7 +81,7 @@ source $DOTFILES/zsh/.iterm2_shell_integration.zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git zsh-git-prompt zsh-completions fasd systemd zsh-syntax-highlighting zsh-git-prompt)
-plugins=(git git-extras git-prompt docker docker-compose docker-machine helm zsh-kubectl-prompt)
+plugins=(git git-extras git-prompt docker docker-compose helm zsh-kubectl-prompt)
 
 source ~/.zsh-other-plugins/fsh/fast-syntax-highlighting.plugin.zsh
 
